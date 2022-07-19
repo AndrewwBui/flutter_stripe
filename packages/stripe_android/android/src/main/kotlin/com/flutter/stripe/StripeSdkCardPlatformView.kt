@@ -38,6 +38,9 @@ class StripeSdkCardPlatformView(
         if (creationParams?.containsKey("countryCode") == true) {
             stripeSdkCardViewManager.setCountryCode(cardView, creationParams["countryCode"] as? String)
         }
+         if (creationParams?.containsKey("postalCodeEnabled") == true) {
+            stripeSdkCardViewManager.setPostalCodeEnabled(cardView, creationParams["postalCodeEnabled"] as Boolean)
+        }
         if (creationParams?.containsKey("placeholder") == true) {
             stripeSdkCardViewManager.setPlaceHolders(cardView, ReadableMap(creationParams["placeholder"] as Map<String, Any>))
         }
